@@ -1,14 +1,19 @@
 /* GLOBAL */
 
-html, body{
+body{
     text-align: center;
-    align-content: center;
-    height: 100%;
-    width: 100%;
 }
 
 /* MENU */
 
+/* Desativar Menu do modo portátil */
+.dropdown{
+    display: none;
+}
+.logo2{
+    display:none;
+}
+/* Menu modo normal */
 .topo{
     background-color: #ececec;
 }
@@ -101,20 +106,19 @@ h1{
     margin: 40px 0 -5px 0;
 }
 
-.mainfoto{
+#mainfoto{
     grid-area: img; 
     margin-top: 5px;
     padding: 0;
-    max-width: 115%;
-    max-height: 100%;
+    max-width: 100%;
 }
 
 .descricao{
     grid-area: descricao;
     margin: 0;
-    max-width:100%;
-    padding-left: 53px;
+    max-width: 100%;
     padding-bottom: 9%;
+    padding-left: 5%;
 }
 
 .empresa .lorem{
@@ -139,7 +143,8 @@ h1{
     margin: 0;
     text-align: left;
 }
-/* EQUIPE */
+
+/* ANIMAÇÃO MEMBROS DA EQUIPE */
 
 #veja{
     font-weight: bold;
@@ -204,29 +209,59 @@ h1{
     padding-top: 20px;
 }
 
-/* Portrait and Landscape */
+/* MEDIA QUERIES */
 
-/* Portrait and Landscape */
-@media screen 
-    and (device-width: 360px) 
-    and (device-height: 640px) 
-    and (-webkit-device-pixel-ratio: 3) {
+@media (max-width: 580px) {
 
-body{
-    height: width:360px;
+.dropdown{
+    display: block;
+    color: #4d4d4d;
+    
 }
+
+.inicio .dropdown{
+    width: 200px;
+}
+
+.logo1{
+    display:none;
+}
+
+.logo2{
+    display: block;
+}
+
+
+.topo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.inicio img{
+    width: 140px;
+    padding: 4px 10px 1px 0;
+}
+
+.topo .fm,.myButton,i{
+    display: none;
+}
+
+
 .empresa {
     width: 56%;
     margin:auto;
     display: grid;
     text-align: center;
     grid-template-areas: "titemp"
-                         "img"
-                         "descricao"
-                         "divisor"
-                         "."
-                         "." 
-                         ".";
+                            "img"
+                            "descricao"
+                            "divisor"
+                            "."
+                            "." 
+                            ".";
     grid-row-gap: 2%;
     grid-column-gap: 2%;
 }
@@ -244,10 +279,8 @@ body{
 }
 
 .inicio {
-    width: 56%;
-    display: flex;
-    flex-direction: column;
-
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .dados{
@@ -262,98 +295,29 @@ body{
 .carousel-caption{
     margin:0 0 0 12.8%;
 }
+
+#um, #dois, #tres{
+    padding:0;
+}
 }
 
-@media (max-width: 580px) {
-    body{
-        height: width:360px;
-    }
-    .empresa {
-        width: 56%;
-        margin:auto;
-        display: grid;
-        text-align: center;
-        grid-template-areas: "titemp"
-                             "img"
-                             "descricao"
-                             "divisor"
-                             "."
-                             "." 
-                             ".";
-        grid-row-gap: 2%;
-        grid-column-gap: 2%;
-    }
-    .mainfoto{
-        width: 90%;
-    }
-    
-    .descricao{
-        text-align: center;
-        padding: 0;
-    
-    }
-    #veja{
-        margin-top: 50px;   
-    }
-    
-    .inicio {
-        width: 56%;
-        display: flex;
-        flex-direction: column;
-    
-    }
-    
-    .dados{
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .inicio img,.fm,.myButton{
-        margin-bottom: 5px;
-    }
-    
-    .carousel-caption{
-        margin:0 0 0 12.8%;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
 
-    #um, #dois, #tres{
-        padding:0;
-    }
+body{
+    width: 100%;
 }
 
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    body{
-      height: 100%;
-    }
-    .empresa {
-        width: 56%;
-        margin:auto;
-        display: grid;
-        text-align: left;
-        grid-template-areas: "titemp"
-                             "img"
-                             "descricao"
-                             "divisor"
-                             "."
-                             "." 
-                             ".";
-        grid-row-gap: 2%;
-        grid-column-gap: 2%;
-    }
-    .empresa.titemp{
-        grid-area: titemp;
-    }
-    .descricao{
-        text-align: center;
-        padding: 0;
-    }
-    .mainfoto{
-        width: 100%;
+.empresa, .inicio, .dados {
+    width: 80%;
 }
-#veja{
-    margin-top: 50px;   
+
+.card {
+    width: 95%;
 }
+
+.descricao{
+    padding-left: 0;
+}
+
+
 }
