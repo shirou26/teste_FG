@@ -158,6 +158,10 @@ body{
     height: 50%;
 }
 
+.vejabut{
+    display:flex;
+}
+
 .card-group{
     width:100%;
 }
