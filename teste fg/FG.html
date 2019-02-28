@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- links do bootstrap / CSS -->
@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
 </head>
 <body>
-    <div class="container-fluid"></div>
-    <!-- INICIO DO CABEÇALHO -->
+<!-- INICIO DO CABEÇALHO -->
 
       <div class="topo">
         <div class="inicio">
@@ -25,7 +24,7 @@
         </div>
       </div>
 
-    <!-- INICIO DO CAROUSEL -->
+<!-- INICIO DO CAROUSEL -->
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="grid-area: carousel;">
         <ol class="carousel-indicators">
@@ -36,19 +35,19 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="./img/banner.png" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-block">
               <h1><b>50 ANOS <br>DE MERCADO </b></h1>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./img/banner.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-block">
               <h1><b>50 ANOS <br>DE MERCADO </b></h1>
             </div>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="./img/banner.png" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-sm-block d-md-block">
               <h1><b>50 ANOS <br>DE MERCADO </b></h1>
             </div>
           </div>
@@ -81,30 +80,33 @@
 <!-- DESCRIÇÃO EQUIPE -->
         <p class="equipeinfo">Duis ut urna id turpis hendrerit sagittis id sit amet nibh. Integer pellentesque felis maximus, pharetra ex ut, auctor quam. Nullam dignissim tellus non diam hendrerit dignissim. Curabitur hendrerit risus pellentesque elit molestie, ac viverra ligula facilisis. Praesent iaculis leo sit amet eros pharetra, quis rhoncus est rhoncus.</p>
 
+      </div>
+
   <!-- VEJA NOSSA EQUIPE -->
-        <div class="equipe">
-      <p>
-      </a>
-      <button id="veja" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      <div class="vejabut">
-          VEJA NOSSA EQUIPE<div class="giraricone">»</div>
-      </div>
-      </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <div class="membros">
-            <img src="./img/empresa.png" style="margin-right: 2%;">
-            <img src="./img/empresa.png" style="margin-right: 2%;">
-            <img src="./img/empresa.png">
+      
+          <p>
+            <button id="veja" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              <div class="vejabut">
+                VEJA NOSSA EQUIPE<div class="giraricone">»</div>
+              </div>
+            </button>
+          </p>
+          
+          <div class="collapse" id="collapseExample" style="width: 56%;margin:auto;">
+            <div class="card-group" >
+              <div class="card" id="um">
+                <img src="./img/empresa.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card" id="dois">
+                <img src="./img/empresa.png" class="card-img-top" alt="...">
+              </div>
+              <div class="card" id="tres">
+                <img src="./img/empresa.png" class="card-img-top" alt="...">
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-        </div>
-
+      
 <!-- RODAPÉ -->
-
-      </div>
 
       <div class="rodape">
         <div class="dados">
@@ -114,6 +116,12 @@
         </div>
       </div>
   
+<!-- TESTE MASSA -->
+
+
+
+
+
 <!-- scripts do bootstrap / Js/Jquery -->
 
     <script src="scripts.js"></script>
@@ -121,5 +129,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
+
 </body>
 </html>
