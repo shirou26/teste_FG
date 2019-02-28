@@ -52,7 +52,7 @@ body{
 
 /* BANNER ROTATIVO */
 
-h1{
+#carouselExampleIndicators p{
     height: auto;
     margin:auto;
     font-size: 3vw;
@@ -60,7 +60,6 @@ h1{
 
 .carousel-indicators li {
     bottom: -50px;
-    background-color: none;
     width: 8px; 
     height: 8px; 
     border-radius: 50%;
